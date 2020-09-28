@@ -5,10 +5,38 @@ public class CalendarTester {
 
 
     public static void main(String[] args) {
+        GregorianCalendar todaysdate = new GregorianCalendar(2020, Calendar.SEPTEMBER, 23);
 
 
         //This constructs a GregorianCalendar object
         GregorianCalendar myCal = new GregorianCalendar();
+
+        int day = myCal.get(Calendar.DAY_OF_MONTH);
+        int month = myCal.get(Calendar.MONTH);
+        int year = myCal.get(Calendar.YEAR);
+        int dayofweek = myCal.get(Calendar.DAY_OF_WEEK);
+
+        myCal.add(Calendar.DAY_OF_MONTH, 100);
+        day = myCal.get(Calendar.DAY_OF_MONTH);
+        month = myCal.get(Calendar.MONTH);
+        year = myCal.get(Calendar.YEAR);
+        dayofweek = myCal.get(Calendar.DAY_OF_WEEK);
+
+        myCal.add(Calendar.DAY_OF_WEEK, 100);
+
+        GregorianCalendar birthdaycalendar = new GregorianCalendar(2003, Calendar.DECEMBER,5);
+        myCal.get(Calendar.DAY_OF_WEEK);
+        birthdaycalendar.add(Calendar.DAY_OF_YEAR,10000);
+        day = myCal.get(Calendar.DAY_OF_MONTH);
+        month = myCal.get(Calendar.MONTH);
+        year = myCal.get(Calendar.YEAR);
+
+
+
+
+
+
+
 
 
         /* You can use constants with the GregorianCalendar class to refer to its various
